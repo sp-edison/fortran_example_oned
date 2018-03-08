@@ -1,16 +1,4 @@
 
-<<<<<<< HEAD
-# Python language sample - sin()
-
-EDISON 시뮬레이션 SW 개발자를 위한 1개의 입력 파일 읽어, sin 그래프를 그리는 python언어 예제 파일입니다.
-
-```
-README.md
-bin
-  - main.py     //main 소스 코드
-inp
-  - input.dat	//sample input file
-=======
 # Fortran language sample - sin()
 
 EDISON 시뮬레이션 SW 개발자를 위한 1개의 입력 파일 읽어, sin 그래프를 그리는 fortran언어 예제 파일입니다.
@@ -21,7 +9,6 @@ src/
  - main.f     //main 소스 코드
 inp/
  - input.dat //샘플 입력 파일
->>>>>>> 3e4f65cdc99acab448e5cad8a6996fbcd0282571
 ```
 
 
@@ -42,31 +29,13 @@ d 0.3
 ```
 
 
-<<<<<<< HEAD
-본 예제는 ./[실행파일명] -[옵션] [입력 파일 경로]로 실행시 옵션 뒤에 입력된 경로의 파일을 열고 닫는 예제는 **bin** 폴더에 main.py 파일을 바로 실행합니다.
-=======
 본 예제는 ./[실행파일명] -[옵션] [입력 파일 경로]로 실행시 옵션 뒤에 입력된 경로의 파일을 열고 닫는 예제로 Makefile과 소스코드는 **src** 폴더에 저장되어 있으며, 컴파일이 완료되면 바이너리 파일은 **bin** 폴더에 저장됩니다.
->>>>>>> 3e4f65cdc99acab448e5cad8a6996fbcd0282571
-
 
 ## 설치하기
 
 zip 파일을 다운로드 받아 압축을 풀거나 ```git clone``` 명령어를 이용하여, 프로젝트를 가져올 수 있습니다.
 
 ```
-<<<<<<< HEAD
-$ git clone https://github.com/sp-edison/python_example_onedplot.git
-```
-
-다운로드가 완료되면, ```python_example_onedplot``` 폴더가 생성되며, **bin** 폴더로 이동해  아래와 같이 명령어를 입력하면 실행이 됩니다.
-
-```
-$ cd ../bin
-$ ./main.py -i ../inp/input.dat
-```
-
-
-=======
 $ git clone https://github.com/sp-edison/c_example_gnuplot.git
 ```
 
@@ -94,5 +63,3 @@ $ ./Hello.x -i ../inp/input.dat
 - 본 예제와 같이 Makefile과 소스코드는 **src** 폴더에 저장되어 있어야 합니다.
 
 - **src** 폴더 안에서 ```make all``` 커맨드 입력시, 컴파일이 정상적으로 왼료된 경우 바이너리 파일이 **bin** 폴더에 저장이 되면 됩니다.
-
->>>>>>> 3e4f65cdc99acab448e5cad8a6996fbcd0282571
