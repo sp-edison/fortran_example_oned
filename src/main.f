@@ -2,7 +2,7 @@
 
       CHARACTER(len=16) :: cmd_option_name , value_name
       CHARACTER(len=512) :: inputdeck
-      INTEGER :: num_of_args, i, io_status
+      INTEGER :: num_of_args, i, io_status, t
       LOGICAL :: args_error_flag = .false.
 
       DOUBLE PRECISION :: a, b, c, d
@@ -63,6 +63,7 @@
                   stop
             endif
       end do
+      CLOSE(1)
 
       CALL SYSTEM("rm -rf result")
       CALL SYSTEM("mkdir result")
@@ -75,16 +76,11 @@
 
       PI = 3.140592
 
-      do t = 1, 129, 1
+      do t = 1, 128, 1
             x = (4*PI * t )/128 -2*PI
             y = a*sin(b*x - c) +d
             write(2,'(F10.3, F10.3)') x, y
       enddo
 
       CLOSE(2)
-
-      CLOSE(1)
-
-
-
       end program
