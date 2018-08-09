@@ -39,10 +39,10 @@ zip 파일을 다운로드 받아 압축을 풀거나 ```git clone``` 명령어�
 $ git clone https://github.com/sp-edison/c_example_gnuplot.git
 ```
 
-다운로드가 완료되면, ```fortran_example_onedplot``` 폴더가 생성되며, **src** 폴더로 이동하여 **make all** 명령어를 사용하면, 컴파일이 완료됩니다.
+다운로드가 완료되면, ```fortran_example_oned``` 폴더가 생성되며, **src** 폴더로 이동하여 **make all** 명령어를 사용하면, 컴파일이 완료됩니다.
 
 ```
-$ cd fortran_example_onedplot/src
+$ cd fortran_example_oned/src
 $ make all
 gfortran -c main.f -o main.o
 Compiled main.f successfully!
@@ -50,11 +50,11 @@ fortran -o ../bin/Hollo.x main.o
 Linking complete!
 ```
 
-기본 값으로 등록된 TARGET 값이 Hello.x이며, 생성된 bin 폴더로 이동하여, 아래와 같이 명령어를 입력하면 실행이 됩니다.
+기본 값으로 등록된 TARGET 값이 Sin.x이며, 생성된 bin 폴더로 이동하여, 아래와 같이 명령어를 입력하면 실행이 됩니다.
 
 ```
 $ cd ../bin
-$ ./Hello.x -i ../inp/input.dat
+$ ./Sin.x -i ../inp/input.dat
 ```
 
 
