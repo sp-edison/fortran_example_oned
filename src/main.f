@@ -1,4 +1,4 @@
-      program sample1
+      program example_oned
 
       CHARACTER(len=16) :: cmd_option_name , value_name
       CHARACTER(len=512) :: sde
