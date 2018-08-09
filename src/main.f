@@ -1,7 +1,7 @@
       program sample1
 
       CHARACTER(len=16) :: cmd_option_name , value_name
-      CHARACTER(len=512) :: inputdeck
+      CHARACTER(len=512) :: sde
       INTEGER :: num_of_args, i, io_status, t
       LOGICAL :: args_error_flag = .false.
 
@@ -13,8 +13,8 @@
             call getarg(i,cmd_option_name)
 
             if( cmd_option_name .eq. "-i") then
-                  call getarg(i+1,inputdeck)
-                  write (*,*)  inputdeck
+                  call getarg(i+1,sde)
+                  write (*,*)  sde
             else
                   args_error_flag = .true.
                   write (*,*) "ERROR: INVALID COMAND OPTION: " ,
@@ -27,10 +27,10 @@
             stop
       endif
         
-      write (*,*) "Input file path : ", inputdeck
+      write (*,*) "Input file path : ", sde
 
 
-      open(1,file=trim(inputdeck),iostat=io_status, status='old')
+      open(1,file=trim(sde),iostat=io_status, status='old')
       if (io_status /= 0) then
             write(*,*) 'File open error'
             stop
@@ -40,7 +40,7 @@
       do
             READ(1,*, IOSTAT=io) value_name
             if ( io < 0) then
-                  WRITE(*,*) "Inputdeck file read end"
+                  WRITE(*,*) "SDE file read end"
                   EXIT
             end if
 
@@ -59,7 +59,7 @@
                   read(1,*) value_name, d
                   write(*,*) "d = ", d
             else
-                  WRITE(*,*) "Inputdeck value read error"
+                  WRITE(*,*) "SDE value read error"
                   stop
             endif
       end do
